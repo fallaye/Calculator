@@ -2,16 +2,14 @@ package hw1.calculator;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.ViewAnimator;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView tvTextView, mOperandTwoTextView, mOperatorTextView, tvResultTextView;
+    TextView tvTextView, tvResultTextView;
     Button btnClear, btnBackSpace, btnEquals;
     Button btnZero, btnOne, btnTwo, btnThree, btnFour, btnFive, btnSix, btnSeven, btnEight, btnNine;
     Button btnDivide, btnMultiply, btnSubstract, btnAdd, btnModulo;
