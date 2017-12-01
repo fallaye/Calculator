@@ -56,13 +56,21 @@ public class MainActivity extends AppCompatActivity {
         btnClear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                tvTextView.setText("");
+                tvResultTextView.setText("");
             }
         });
         btnBackSpace.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+                textArea = tvTextView.getText().toString();
+
+                int textSize = textArea.length();
+                if(textSize == 0) return;
+                textArea = textArea.substring(0, textSize - 1);
+
+                tvTextView.setText(textArea);
             }
         });
         btnZero.setOnClickListener(new View.OnClickListener() {
@@ -179,7 +187,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 textArea = tvTextView.getText().toString();
-                String arrayString[] = textArea.split("/");
+                String arrayString[] = textArea.split("[-+*/]");
 
                 int operandOne = Integer.parseInt(arrayString[0]);
                 Log.d("operandOne: " , arrayString[0]);
